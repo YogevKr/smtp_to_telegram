@@ -1,4 +1,4 @@
-FROM FROM balenalib/raspberry-pi-debian-golang:latest AS builder
+FROM balenalib/raspberry-pi-debian-golang:latest AS builder
 
 RUN apk add --no-cache git ca-certificates mailcap
 
@@ -18,7 +18,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build \
 
 
 
-FROM FROM balenalib/raspberry-pi-alpine:latest
+FROM balenalib/raspberry-pi-alpine:latest
 
 RUN apk add --no-cache ca-certificates mailcap
 
